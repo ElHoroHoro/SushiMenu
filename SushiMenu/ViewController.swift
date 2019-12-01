@@ -32,6 +32,8 @@ class ViewController: UIViewController{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)番目の行が選択されました。")
+        //TODO
+        //Cell内の情報を取得する
         
     }
     
