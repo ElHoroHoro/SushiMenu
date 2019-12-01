@@ -30,8 +30,9 @@ class ViewController: UIViewController{
         //tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReUseIdenfier: "cell")
             sushiMenu.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
             sushiMenu.allowsMultipleSelectionDuringEditing = true
-            
         }
+        memoStr.layer.cornerRadius = 10.0
+        memoStr.layer.backgroundColor = UIColor.orange.cgColor
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //0から数えないために
