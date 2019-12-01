@@ -11,13 +11,13 @@ import Foundation
 class SushiUtil {
     //CSV Loadどこに寿司ネタある？　ここだよ
     func getSushiCSV() -> [Sushi]{
+        
         var sushiArray: [Sushi] = []
+        
         guard let sushiFile = Bundle.main.path(forResource: "menu", ofType: "csv") else{
             print("見つからない")
             exit(99)
         }
-        
-        //dump(sushiFile)
         
         let sushiCSVData = try! String(contentsOfFile: sushiFile, encoding: .utf8)
         
@@ -28,7 +28,8 @@ class SushiUtil {
             let sushi = Sushi(name: sushiDataArray[0],
                               kanji: sushiDataArray[1],
                               english: sushiDataArray[2],
-                              memo: sushiDataArray[3])
+                              memo: sushiDataArray[3],
+                              photo: sushiDataArray[4])
             
             sushiArray.append(sushi)
             

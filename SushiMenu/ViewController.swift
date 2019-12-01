@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController{
-    
+    //tableview
     @IBOutlet weak var sushiMenu: UITableView!
-    
+    //画像表示欄
     @IBOutlet weak var sushiNeta: UIImageView!
+    //説明文欄
+    @IBOutlet weak var memoStr: UILabel!
+    
     let sushis = SushiUtil().getSushiCSV()//listを取得
     
     override func viewDidLoad() {
@@ -31,10 +34,19 @@ class ViewController: UIViewController{
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath.row)番目の行が選択されました。")
+        //0から数えないために
+        print("\(indexPath.row + 1)番目の行が選択されました。")
         //TODO
-        //Cell内の情報を取得する
+        //漢字名と説明
+        memoStr.text = sushis[indexPath.row].kanji + ":  " + sushis[indexPath.row].memo
         
+        //画像表示
+        //sushiNeta.image = UIImage(contentsOfFile: "String(sushis[indexPath.row].photo)")
+        let imageNeta = UIImage(named: sushis[indexPath.row].photo)
+        
+        sushiNeta.image = imageNeta
+        
+        print(sushis[indexPath.row].photo)
     }
     
 }
@@ -51,9 +63,7 @@ extension ViewController: UITableViewDataSource{
               // セルを取得する
               let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
               
-           
-            cell.setLabel(label: "sushi")
-            cell.setLabel(label: sushis[indexPath.row].name + ":" + sushis[indexPath.row].kanji)
+            cell.setLabel(label: sushis[indexPath.row].name + " : " + sushis[indexPath.row].english)
             
               return cell
           }

@@ -13,6 +13,5 @@ struct Sushi {
     var kanji: String
     var english: String
     var memo: String
-    
-    
+    var photo: String
 }
