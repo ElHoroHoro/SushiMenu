@@ -34,6 +34,7 @@ class ViewController: UIViewController{
         memoStr.layer.cornerRadius = 10.0
         memoStr.layer.backgroundColor = UIColor.orange.cgColor
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //0から数えないために
         print("\(indexPath.row + 1)番目の行が選択されました。")

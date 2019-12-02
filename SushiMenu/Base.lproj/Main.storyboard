@@ -15,29 +15,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-3D-mmQ">
-                                <rect key="frame" x="20" y="44" width="374" height="435"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-3D-mmQ">
+                                <rect key="frame" x="20" y="44" width="374" height="480"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="F7d-fr-mJI"/>
+                                </constraints>
                                 <color key="separatorColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="opi-I2-fzc"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="cQ7-6f-RFk"/>
                                 </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Sgg-tA-kbU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Sgg-tA-kbU">
                                 <rect key="frame" x="20" y="560" width="374" height="301"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="303.5" id="I8L-1V-vbY"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前：説明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g72-Ec-VTX">
-                                <rect key="frame" x="29" y="501" width="365" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="名前：説明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g72-Ec-VTX">
+                                <rect key="frame" x="20" y="520" width="374" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="g72-Ec-VTX" firstAttribute="trailing" secondItem="Sgg-tA-kbU" secondAttribute="trailing" id="50E-xu-OZg"/>
+                            <constraint firstItem="Z2b-3D-mmQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IyP-pF-l9J"/>
+                            <constraint firstItem="Sgg-tA-kbU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PGp-rs-2xX"/>
+                            <constraint firstItem="g72-Ec-VTX" firstAttribute="leading" secondItem="Sgg-tA-kbU" secondAttribute="leading" id="QLl-z7-4YB"/>
+                            <constraint firstItem="Sgg-tA-kbU" firstAttribute="top" secondItem="g72-Ec-VTX" secondAttribute="bottom" constant="6" id="UDz-S4-NHR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sgg-tA-kbU" secondAttribute="trailing" constant="20" id="aPM-ho-9hs"/>
+                            <constraint firstItem="g72-Ec-VTX" firstAttribute="top" secondItem="Z2b-3D-mmQ" secondAttribute="bottom" constant="8.5" id="fLt-Z4-cbe"/>
+                            <constraint firstAttribute="bottom" secondItem="Sgg-tA-kbU" secondAttribute="bottom" constant="33.5" id="fbb-Y6-e4Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z2b-3D-mmQ" secondAttribute="trailing" constant="20" id="j6g-eT-dqf"/>
+                            <constraint firstItem="Z2b-3D-mmQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="v3O-3C-OIk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
